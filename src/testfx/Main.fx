@@ -8,14 +8,13 @@ package testfx;
 
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.text.Text;
-import javafx.scene.text.Font;
 import clojureGlue.TestJavaClass;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextBox;
 import javafx.scene.layout.VBox;
-import java.lang.Integer;
+import javafx.geometry.Insets;
 import javafx.scene.control.Slider;
+
 
 /**
  * @author Sam Griffith Jr
@@ -36,10 +35,13 @@ mySlider = Slider {
 Stage {
     title: "Application title"
     width: 250
-    height: 80 
+    height: 140
     scene: Scene {
+        
         content: 
-            VBox { content: [
+            VBox {  padding: Insets { left: 5 top: 5 }
+                    spacing: 10
+                    content: [
 
                     mySlider,
                     Button {
